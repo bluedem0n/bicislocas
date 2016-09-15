@@ -5,6 +5,21 @@ function validateForm(){
     var email = document.getElementById("input-email").value;
     var contra = document.getElementById("input-password").value;
     var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var expreg = /^[a-z][a-z]*/;
+
+        if(expreg.test(nombre)){
+            true;
+        }
+        else{
+            alert("El campo nombre sólo permiten caracteres de la A-Z");
+        }
+
+        if(expreg.test(apellido)){
+            true;
+        }
+        else{
+            alert("El campo apellido sólo permiten caracteres de la A-Z");
+        }
     
        if(nombre == null || nombre.length == 0 || /^\s+$/.test(nombre) ) {
           alert("Tiene que escribir su nombre");
