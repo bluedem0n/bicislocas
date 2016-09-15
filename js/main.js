@@ -6,6 +6,23 @@ function validateForm(){
     var contra = document.getElementById("input-password").value;
     var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     
+     var expreg = /^[a-z][a-z]*/;
+
+
+		if(expreg.test(nombre)){
+            true;
+        }
+		else{
+            alert("El campo nombre sólo permiten caracteres de la A-Z");
+        }
+
+        if(expreg.test(apellido)){
+            true;
+        }
+		else{
+            alert("El campo apellido sólo permiten caracteres de la A-Z");
+        }
+
        if(nombre == null || nombre.length == 0 || /^\s+$/.test(nombre) ) {
           alert("Tiene que escribir su nombre");
          }
@@ -28,13 +45,13 @@ function validateForm(){
         alert("Error: La dirección de correo " + email + " es incorrecta.");
         }
     
-        if(contra.length < 5 ){
-            alert("Contraseña al menos de 6 caracteres");
-        }else if(contra == "123456" || contra =="password" || contra == "098754"){
-            alert("Por favor escriba otra contraseña");
+         if(contra.length < 5 ){
+                    alert("Contraseña al menos de 6 caracteres");
+                }else if(contra == "123456" || contra =="password" || contra == "098754"){
+                    alert("Por favor escriba otra contraseña");
         }
     
-    if (document.getElementsByTagName("select")[0].value == 0){
-        alert("Selecciona tu tipo de bici");
-    }
+        if (document.getElementsByTagName("select")[0].value == 0){
+            alert("Selecciona tu tipo de bici");
+        }
 }
