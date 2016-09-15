@@ -8,7 +8,6 @@ function validateForm(){
     
      var expreg = /^[a-z][a-z]*/;
 
-
 		if(expreg.test(nombre)){
             true;
         }
