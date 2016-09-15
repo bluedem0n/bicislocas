@@ -1,6 +1,12 @@
 function validateForm(){
+//  Todos los campos son obligatorios, excepto los dos últimos.
 
-//Validar que ingrese los campos nombre y apellido
+//  Los campos nombre y apellido sólo deben permitir caracteres de la A-Z
+
+
+// Para los campos nombre y apellido la primera letra debe ser mayúscula
+
+//  Validar que se ingrese los campos nombre y apellido
 
 var nombre = document.getElementById("name").value;
       if(nombre == null || nombre.length == 0 || /^\s+$/.test(nombre) ) {
